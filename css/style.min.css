@@ -1,0 +1,199 @@
+@media screen and (max-width:500px) {
+.mynav , .under-mynav , .about-sec , .menu-sec , .testi-sec , .gallery-sec , .contact-sec{
+    width: 100%;
+    margin:0 auto;
+    padding: 0;
+}
+.about-sec , .menu-sec , .testi-sec , .gallery-sec , .contact-sec{
+    padding: 30px 0;
+}
+.h1-style{
+    margin: 10px 0;
+    font-size: 28px;
+}
+.h1-style::after{
+    width:75px;
+}
+header .mynav{
+    padding: 0 10px;
+    justify-content: space-between;
+}
+header .mynav .big-list{
+    display: none;
+}
+header .mynav .bars{
+    display: block;
+}
+
+/* حاليا عند عمل هوفر على الشرائط يظهر القائمة اليسرى  ..... حاليا لحين عمل الجافاسكريبت  */
+.bars:hover +div.left-min-list{
+    display: block;
+    left:-5px
+}
+/* left list for minimum + medium screen size */
+.left-min-list{
+    width:200px;
+    height:100vh;
+    background-color: white;
+    position: absolute;
+    top:0px;
+    left:-500px;
+    z-index: 999;
+    display: block;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    box-shadow: 0 0 3px 3px #2525258e;
+}
+.left-min-list ul{
+    display: flex;
+    flex-direction: column;
+}
+.left-min-list ul li{
+    height:50px;
+    padding: 10px;
+    text-align: center;
+}
+.left-min-list ul li:hover{
+    width:100%;
+    background-color: var(--secondary-color);
+}
+.left-min-list ul li a{
+    color:var(--primary-color);
+     height:50px;
+}
+/* ---------------------->   2 under nav */
+.under-mynav{
+    height:350px    ;
+}
+.under-mynav .pos-center{
+    width:100%;
+    flex-direction: column;
+    position: absolute;
+    top:15%;
+    translate: 0 ;
+    text-align: center;
+}
+.under-mynav .pos-center .start-info{
+
+    width: 95%;
+    padding:0 10px;
+    margin: 0;
+    order: 2;
+}
+.under-mynav .pos-center .start-info h1{
+    font-size: 36px ;
+    
+}
+.under-mynav .pos-center .start-info h2{
+    font-size: 22px ;
+    margin:10px auto;
+}
+.under-mynav .pos-center .start-info p{
+    font-size: 14px ;
+    width:90%;
+    margin:0 auto;
+}
+.under-mynav .pos-center .start-info button{
+    font-size: 14px;
+}
+.under-mynav .pos-center .start-img img{
+    display: none;
+}
+/* about */
+.about-sec{
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+.about-sec .about-img img{
+    display: none;
+}
+.about-sec .about-info{
+    width:100%;
+    padding: 0 10px;
+}
+.about-sec .about-info p{
+    width:100%;
+    line-height: 1;
+    letter-spacing: 1px;
+}
+/* menu */
+.menu-sec{
+    margin: 0;
+    padding: 10px ;
+}
+.our-kinds{
+    display: grid;
+    grid-template-columns: repeat(1 ,1fr);
+    gap:0;
+}
+.our-kinds .kind img{
+        width:200px;
+        height:150px;
+}
+.our-kinds .kind h2{
+    margin: 7px 0;
+}
+/* testi */
+.testi-sec .opinions{
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+    height:300px;
+}
+.testi-sec .opinions .opinion{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+    display: none;
+}
+.testi-sec .opinions .opinion:nth-child(3){
+    display: block;
+}
+/* gallery */
+.gallery-sec{
+    padding: 0 15px;
+}
+/*  contact */
+.contact-sec{
+    padding: 15px;
+}
+.contact-sec .location-form{
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.contact-sec .location-form .location{
+    order:2;
+    position: relative;
+}
+.contact-sec .location-form .location::after{
+    content: '';
+    position: absolute;
+    top:-10px;
+    left:50%;
+    translate: -50% 0;
+    height: 1px;
+    width:90%;
+    background-color: #cccccc91;
+}
+.contact-sec .location-form .forms{
+    width: 100%;
+    margin: 15px 0;
+}
+.contact-sec .location-form .forms input , .contact-sec .location-form .forms textarea{
+    width:100%;
+}
+}

@@ -1,0 +1,220 @@
+@media screen and (min-width:501px) and (max-width: 1024px) {
+.mynav , .under-mynav , .about-sec , .menu-sec , .testi-sec , .gallery-sec , .contact-sec{
+    width: 97%;
+    margin:0 auto;
+    padding: 0;
+}
+.about-sec , .menu-sec , .testi-sec , .gallery-sec , .contact-sec{
+    padding: 30px 0;
+}
+.h1-style{
+    margin: 10x 0;
+    font-size: 28px;
+}
+.h1-style::after{
+    width:75px;
+}
+header .mynav{
+    padding:15px 10px;
+    justify-content: space-between;
+}
+header .mynav .big-list{
+    display: none;
+}
+header .mynav .bars{
+    display: block;
+}
+
+/* حاليا عند عمل هوفر على الشرائط يظهر القائمة اليسرى  ..... حاليا لحين عمل الجافاسكريبت  */
+.bars:hover +div.left-min-list{
+    display: block;
+    left:-12px
+}
+/* left list for minimum + medium screen size */
+.left-min-list{
+    width:300px;
+    height:100vh;
+    background-color: white;
+    position: absolute;
+    top:0px;
+    left:-500px;
+    z-index: 999;
+    display: block;
+    transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -ms-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    box-shadow: 0 0 3px 3px #2525258e;
+    font-size: 20px;
+}
+.left-min-list ul{
+    display: flex;
+    flex-direction: column;
+}
+.left-min-list ul li{
+    height:50px;
+    padding: 10px;
+    text-align: center;
+}
+.left-min-list ul li:hover{
+    width:100%;
+    background-color: var(--secondary-color);
+}
+.left-min-list ul li a{
+    color:var(--primary-color);
+     height:50px;
+}
+/* ---------------------->   2 under nav */
+.under-mynav{
+    height:400px;
+}
+.under-mynav .pos-center{
+    width:90%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:15%;
+    left:50%;
+    translate: -50% 0 ;
+    margin: 0 ;
+    text-align: center;
+}
+.under-mynav .pos-center .start-info{
+    order: 2;
+}
+.under-mynav .pos-center .start-info h1{
+    font-size: 36px ;
+}
+.under-mynav .pos-center .start-info h2{
+    font-size: 20px ;
+    width:90%;
+    margin:auto;
+}
+.under-mynav .pos-center .start-info p{
+    font-size: 16px ;
+    width:90%;
+    margin:0 auto;
+}
+.under-mynav .pos-center .start-info button{
+    font-size: 16px;
+}
+.under-mynav .pos-center .start-img img{
+    display: none;
+}
+/* about */
+.about-sec{
+    flex-direction: column;
+    gap: 0;
+    padding: 0;
+    margin: 15px 0 30px 0;
+}
+.about-sec .about-img{
+    order:2
+}
+.about-sec .about-img img{
+    display: block;
+    width:200px;
+    height: 200px;
+}
+.about-sec .about-info{
+    width:90%;
+    padding: 0 10px;
+    order:1;
+    font-size: 18px;
+}
+.about-sec .about-info p{
+    width:100%;
+    line-height: 1.8;
+    letter-spacing: 0;
+}
+/* menu */
+.menu-sec{
+    margin: 0;
+    padding: 10px ;
+}
+.our-kinds{
+    display: grid;
+    grid-template-columns: repeat(2 ,1fr);
+    gap:0;
+}
+.our-kinds .kind img{
+        width:200px;
+        height:150px;
+}
+.our-kinds .kind h2{
+    margin: 7px 0;
+}
+/* testi */
+.testi-sec .opinions{
+    width: 100%;    
+    align-items: center;
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+    height:300px;
+
+}
+.testi-sec .opinions .opinion{
+    margin: 0;
+    padding: 0;
+    width: 50%;
+}
+.testi-sec .opinions .opinion img{
+    width:175px;
+    height: 175px;
+}
+
+/* gallery */
+.gallery-sec{
+    padding: 0 15px;
+}
+.gallery-sec .gradients{
+    width:100%;
+    margin: auto;
+
+    
+}
+.gallery-sec .gradients .grad-img{
+    width:45%;
+    height: 250px;
+
+
+}
+
+/*  contact */
+.contact-sec{
+    padding: 15px;
+}
+.contact-sec .location-form{
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.contact-sec .location-form .location{
+    order:2;
+    position: relative;
+}
+.contact-sec .location-form .location::after{
+    content: '';
+    position: absolute;
+    top:-10px;
+    left:50%;
+    translate: -50% 0;
+    height: 1px;
+    width:90%;
+    background-color: #cccccc91;
+}
+.contact-sec .location-form .forms{
+    width: 100%;
+    margin: 15px 0;
+}
+.contact-sec .location-form .forms input , .contact-sec .location-form .forms textarea{
+    width:100%;
+}
+.contact-sec .location{
+    text-align: center;
+    font-size: 18px;
+}
+}
